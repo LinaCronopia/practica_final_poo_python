@@ -4,12 +4,12 @@ class Inventario:
 
     def agregar_producto(self, producto):
         self.lista_de_productos.append(producto)
-    
+
     def actualizar_inventario(self, producto, cantidad):
         for prod in self.lista_de_productos:
-            if prod.nombre == producto.nombre: 
+            if prod.nombre == producto.nombre:
                 prod.actualizar_cantidad(cantidad)  # Método de Producto
-    
+
     def generar_alertas(self, umbral_minimo):
-        alertas = [prod.nombre for prod in self.lista_de_productos if prod.cantidad < umbral_minimo] # Va a agregar si la cantidad del producto qiue estamos recorriendo es menor al umbral minimo
+        alertas = [prod.nombre for prod in self.lista_de_productos if prod.cantidad < umbral_minimo]  # Va a agregar si la cantidad del producto que estamos recorriendo es menor al umbral mínimo
         return f"Productos por debajo del umbral: {', '.join(alertas)}" if alertas else "No hay productos por debajo del umbral mínimo"

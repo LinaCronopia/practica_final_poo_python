@@ -5,7 +5,7 @@ class Producto:
         self.precio = precio
         self.cantidad = cantidad
 
-    def actualizar_cantidad(self, cantidad):    # es como un  setter
+    def actualizar_cantidad(self, cantidad):  # es como un setter
         self.cantidad = cantidad
 
     def mostrar_informacion(self):
